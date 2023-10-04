@@ -18,8 +18,9 @@ router.post('/', (req, res) => { // POST request
         res.status(400).send(error.details[0].message);
         return;
     }
+    const maxId = issues.reduce((prev, current) => (prev.id > current.id) ? prev.id : current.id, 0);
     const issue = {
-        id: issues.length + 1,
+        id: maxId + 1,
         title: req.body.title,
         description: req.body.description
     };
