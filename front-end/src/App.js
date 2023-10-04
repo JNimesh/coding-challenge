@@ -1,11 +1,12 @@
 import './App.css';
+import IssuesPage from './components/issuesPage';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>My React App</h1>
-    </div>
-  );
+    return (
+        <div className='page-container'>
+            <IssuesPage/>
+        </div>
+    );
 }
 
 export default App;
